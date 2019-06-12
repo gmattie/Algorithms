@@ -22,7 +22,7 @@ const sieveOfEratosthenes = (n) => {
         
         if (markers[i]) {
             
-            for (let j = i * 2; j <= n; j += i) {
+            for (let j = i * i; j <= n; j += i) {
                 
                 markers[j] = false;
             }
@@ -54,6 +54,6 @@ const sieveOfEratosthenes = (n) => {
  * 
  */
 
-const targetNumber = 101;
+const targetNumber = 100;
 
 console.log(`Prime numbers up to and including ${targetNumber}: [${sieveOfEratosthenes(targetNumber)}]`);
